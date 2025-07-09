@@ -1,4 +1,15 @@
-FROM ghcr.io/ministryofjustice/analytical-platform-airflow-python-base:1.15.0@sha256:9802aede594062995aca0daeb9c6c159eea742fbc6602233739eccbb14b1ed17
+FROM ghcr.io/ministryofjustice/analytical-platform-airflow-python-base:1.16.0@sha256:96551185eef8ff5f54f82b6a55c5df570a795d155851cde1811f230423efca1b
+
+ARG MOJAP_IMAGE_VERSION="default"
+ENV MOJAP_IMAGE_VERSION=${MOJAP_IMAGE_VERSION}
+
+COPY requirements.txt requirements.txt
+COPY src/ .
+RUN <<EOF
+pip install --no-cache-dir --requirement requirements.txt
+EOF
+
+ENTRYPOINT ["bash", "entrypoint.sh"]
 
 # Below is an example of how to use the base image
 
