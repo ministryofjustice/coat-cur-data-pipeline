@@ -1,1 +1,4 @@
-tensorflow[and-cuda]==2.19.0
+# tensorflow[and-cuda]==2.19.0 # Sure we don't need this
+awswrangler==3.12.1
+pandas==2.3.1
+
