@@ -1,6 +1,9 @@
 import awswrangler as wr
 import pandas as pd
 
+# This script is run manually from AP to create a test table from a test dataset
+# in our alpha bucket
+
 # # Delete old experiements
 # wr.s3.delete_objects('s3://alpha-coat-moj-cur-v2-hourly/coat_cur_test_data/') 
 
@@ -14,9 +17,12 @@ import pandas as pd
 #     name='cloud_optimisation_and_accountability'
 # )
 
-# Read data from csv file in bucket
-df = wr.s3.read_csv(path='s3://alpha-coat-moj-cur-v2-hourly/cur_row_900000_to_1000000.csv')
-print( df.head(10))
+# Read data from csv file in ALPHA bucket
+# df = wr.s3.read_csv(path='s3://alpha-coat-moj-cur-v2-hourly/cur_row_900000_to_1000000.csv')
+# print( df.head(10))
+
+# CLI to run in terminal to check bucket contents
+# aws s3 ls mojap-data-production-coat-cur-reports-v2-hourly/moj-cost-and-usage-reports/MOJ-CUR-V2-HOURLY/data/BILLING_PERIOD=2025-08/MOJ-CUR-V2-HOURLY-00132.snappy.parquet
 
 # Write data to parquet with partitions and create table in database
 # Every time this writes it appends data in partitions, so can duplicate data 
