@@ -1,3 +1,7 @@
+# Cloud Optimisation and Accoutability Team Data Pipeline 
+
+This repository maintains Cloud Optimisation and Accountability Team Cost and Usage Report Data Pipeline
+
 # Analytical Platform Airflow Python Template
 
 [![Ministry of Justice Repository Compliance Badge](https://github-community.service.justice.gov.uk/repository-standards/api/analytical-platform-airflow-python-template/badge)](https://github-community.service.justice.gov.uk/repository-standards/analytical-platform-airflow-python-template)
