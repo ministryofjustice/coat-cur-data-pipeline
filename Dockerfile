@@ -4,12 +4,12 @@ ARG MOJAP_IMAGE_VERSION="default"
 ENV MOJAP_IMAGE_VERSION=${MOJAP_IMAGE_VERSION}
 
 COPY requirements.txt requirements.txt
-COPY src/ .
+COPY scripts/ scripts/
 RUN <<EOF
 pip install --no-cache-dir --requirement requirements.txt
 EOF
 
-ENTRYPOINT ["bash", "entrypoint.sh"]
+ENTRYPOINT ["python3", "scripts/main.py"]
 
 # Below is an example of how to use the base image
 
