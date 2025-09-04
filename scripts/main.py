@@ -1,14 +1,21 @@
 import awswrangler as wr
+import os
 
 # Use this script to create a new table or to recreate an
 # existing table (overwrite).
+
+# 0. Collect environment variable set in Airflow workflow
+mode = os.environ.get('MODE')
 
 # 1. Set variables
 bucket = "s3://mojap-data-production-coat-cur-reports-v2-hourly/"
 prefix_to_billing_periods = "moj-cost-and-usage-reports/MOJ-CUR-V2-HOURLY/data/"
 path_to_partitions = bucket + prefix_to_billing_periods
 database_name = "cloud_optimisation_and_accountability"
-table_name = "mojap_cur_data_dev"
+if mode == "dev":
+    table_name = "mojap_cur_data_dev"
+elif mode == "prod":
+    table_name = "mojap_cur_data"    
 
 # 2. Read metadata information to get columns_types metadata in dict form: {'col0': 'bigint', 'col1': 'double'}
 # With dataset as true collects partitions_value
