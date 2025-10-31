@@ -1,2 +1,2 @@
-awswrangler==3.12.1
+awswrangler==3.14.0
 pandas==2.3.2
