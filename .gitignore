@@ -10,3 +10,5 @@ env/
 terraform.tfstate
 data/
 *.csv
+__pycache__/
+pytest_cache__/
