@@ -12,3 +12,5 @@ pip install --no-cache-dir --requirement requirements.txt
 EOF
 
 ENTRYPOINT ["python3", "scripts/main.py"]
+
+# test change
