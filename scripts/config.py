@@ -11,3 +11,5 @@ if mode == "dev":
     table_name = "mojap_cur_data_dev"
 elif mode == "prod":
     table_name = "mojap_cur_data"
+else:
+    table_name = "mojap_cur_data_dev"
