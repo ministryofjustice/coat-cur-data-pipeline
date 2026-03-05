@@ -1,4 +1,4 @@
-Cloud Optimisation and Accoutability Team CUR Data Pipeline
+
 This repository maintains the Cloud Optimisation and Accountability Team's Cost and Usage Report)Data Pipeline.
 
 The pipeline is comprised of a Python job than runs as a container on AP's [Airflow infrastructure](https://github.com/ministryofjustice/analytical-platform-airflow).
