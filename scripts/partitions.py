@@ -9,7 +9,7 @@ def extract_billing_periods(s3_objects, path_prefix):
     ))
 
 
-def filter_billing_periods(billing_period_list, date_limit=datetime.now() - relativedelta(years=1)):
+def filter_billing_periods(billing_period_list, date_limit=datetime.now() - relativedelta(years=2)):
     return [
         bp for bp in billing_period_list
         if bp.startswith("BILLING_PERIOD")
